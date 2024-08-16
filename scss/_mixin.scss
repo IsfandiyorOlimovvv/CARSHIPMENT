@@ -1,0 +1,30 @@
+
+@mixin display($items, $space, $gap){
+  display: flex;
+  align-items: $items;
+  justify-content: $space;
+  gap: $gap;
+}
+      
+@mixin textStyle($MB, $FS, $FW, $CLR, $LH,){
+  margin-bottom: $MB;
+  font-size: $FS;
+  font-weight: $FW;
+  color: $CLR;
+  line-height: $LH;
+}
+
+@mixin buttonStyle($BTN_W, $BTN_PY, $BTN_BG_CLR, $BTN_BR_Radius, $BTN_Border_CLR, $BTN_FS, $BTN_FW, $BTN_LH, $BTN_CLR, $BTN_CASE){
+  width: $BTN_W;
+  padding: $BTN_PY 0;
+  background-color: $BTN_BG_CLR;
+  border-radius: $BTN_BR_Radius;
+  border: 1px solid $BTN_Border_CLR;
+  transition: all 0.3s linear;
+  font-size: $BTN_FS;
+  font-weight: $BTN_FW;
+  line-height: $BTN_LH;
+  color: $BTN_CLR;
+  cursor: pointer;
+  text-transform: $BTN_CASE;
+}

@@ -1,0 +1,60 @@
+.site-header {
+  padding: 20px 0;
+  background-color: #0000004D;
+  z-index: 50;
+  position: fixed;
+  width: 100%;
+  backdrop-filter: blur(50px);
+}
+
+.header{
+  @include display($items:center, $space:space-between, $gap:0px);
+}
+
+.header__logo-link{
+  display: inline-block;
+}
+
+.header__content-links{
+  @include display($items:center, $space:start, $gap:50px);
+}
+
+.header__list{
+  @include display($items:center, $space:start, $gap:25px);
+}
+
+.navbar__link{
+  @include textStyle($MB:0px, $FS:16px, $FW:500, $CLR:$white-clr, $LH:19.36px);
+  text-transform: uppercase;
+  transition: all 0.3s linear;
+  &:hover {
+    color: $orange-clr;
+  }
+}
+
+.header__phone-link{
+  @include display($items:center, $space:start, $gap:10px);
+
+
+  & > svg > rect,
+  & > svg > path {
+    transition: all 0.3s linear;
+  }
+
+  &:hover > svg > rect {
+    fill: $white-clr;
+  }
+
+  &:hover > svg > path {
+    fill: $orange-clr;
+  }
+
+  &:hover > .header__phone-number {
+    color: $orange-clr;
+  }
+}
+
+.header__phone-number{
+  @include textStyle($MB:0px, $FS:16px, $FW:500, $CLR:$white-clr, $LH:19.36px);
+  transition: all 0.3s linear;
+}
